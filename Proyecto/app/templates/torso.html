@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Torso</title>
+</head>
+<body>
+<form action="{{ url_for('torso') }}" method="post">
+    <table width="200" border="10">
+     <tr>
+        <td align="right">Seleccione una Opcion : </td>
+
+        <td>
+
+         <select name="opcion" onchange="location = this.value">
+             <option value="acaros">Acaros</option>
+             <option value="cicatrices">Cicatrices</option>
+             <option value="quemaduras">Quemaduras</option>
+             <option value="mucosidad">Mucosidad</option>
+             <input type="submit" name="Submi" value="Enviar">
+         </select>
+         </select>
+        </td>
+        </tr>
+        <h3><a href="{{ url_for('sintomas') }}">Regresar</a></h3>
+    </table>
+</form>
+</body>
+</html>

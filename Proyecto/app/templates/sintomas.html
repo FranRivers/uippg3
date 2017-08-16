@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Farmacia Rivers and Galvez</title>
+</head>
+<body>
+<form name="form1" method="post" action="">
+    <table width="250" border="1">
+     <tr>
+        <td align="right">Seleccione una Opcion : </td>
+
+        <td>
+
+         <select name="opcion" onchange="location = this.value">
+             <option value="comunes">comunes </option>
+             <option value="cabeza">cabeza </option>
+             <option value="torso">torso</option>
+             <input type="submit" name="Submit" value="Enviar">
+        </select>
+         </select>
+        </td>
+        </tr>
+        <h3><a href="{{ url_for('dudas') }}">¿Dudas?</a></h3>
+
+</table>
+</form>
+<a href="{{ url_for('inicio') }}">Volver al inicio</a>
+</body>
+</html>

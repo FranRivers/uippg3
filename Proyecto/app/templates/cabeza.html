@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>holi</title>
+</head>
+<body>
+<form action="{{ url_for('cabeza') }}" method="post">
+    <table width="200" border="2">
+     <tr>
+        <td align="right">Seleccione una Opcion : </td>
+
+        <td>
+
+         <select name="opcion" onchange="location = this.value">
+             <option value="oidos_tapados">Oidos Tapados</option>
+             <option value="infeccion">Infeccion en la boca (herida)</option>
+             <option value="herpes">Herpes labial</option>
+             <option value="conjutivitis">Conjutivitis</option>
+             <input type="submit" name="Submi" value="Enviar">
+         </select>
+         </select>
+        </td>
+        </tr>
+        <h3><a href="{{ url_for('sintomas') }}">Regresar</a></h3>
+</body>
+</html>

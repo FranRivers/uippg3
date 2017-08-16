@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Comunes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<h1>Comunes</h1>
+<form action="{{ url_for('comunes') }}" method="post">
+    <table width="200" border="10">
+     <tr>
+        <td align="right">Seleccione una Opcion : </td>
+
+        <td>
+
+         <select name="opcion" onchange="location = this.value">
+             <option value="dolor_cabeza">Dolor de Cabeza</option>
+             <option value="dolor_muscular">Dolor Muscular</option>
+             <option value="dolor_garganta">Dolor de Garganta</option>
+             <option value="sequedad_ojos">Sequedad en los ojos</option>
+             <option value="fiebre">Fiebre</option>
+             <option value="gripe">Gripe</option>
+             <option value="diarrea_vomito">Diarrea y/o Vomito</option>
+             <input type="submit" name="Submi" value="Enviar">
+         </select>
+         </select>
+        </td>
+        </tr>
+        <h3><a href="{{ url_for('sintomas') }}">Regresar</a></h3>
+    </table>
+</form>
+</body>
+</html>

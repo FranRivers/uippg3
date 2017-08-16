@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmacia Hormigos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<h1>Hola Querido usuario.</h1>
+<h3><a href="{{ url_for('dudas') }}">Terminos y condiciones.</a></h3>
+<hr/>
+{% for mensaje in get_flashed_messages() %}
+    {{ mensaje }}
+   {%- endfor %}
+<!-- slide -->
+					   <li>
+						   <div class="flex-caption">
+								<h1 class="">Saluda a <span>Farmacia Hormigos</span>. Hemos creado una ayuda para saber que medicamento tomar.
+								</h1>
+
+								<h3 class="">Una plataforma comoda y sencilla de usar.</h3>
+							</div>
+					   </li>
+
+					   <!-- slide -->
+					   <li>
+							<div class="flex-caption">
+								<h1 class="">Somos una gran farmacia que lleva años acompañandote</h1>
+
+								<h3 class="">La informacion que ofrecemos no reemplaza la visita medica. Solo te damos una orientacion sobre que medicamento tomar para cosas sin uso de una receta medica.</h3>
+							</div>
+					   </li>
+
+					   <!-- slide -->
+<h1>Base de datos</h1>
+<h2>Tienes que Introducir tus datos para llevar un control de las personas que hacen consultas en la pagina</h2>
+<h1>(<a href="{{ url_for('datos') }}">hacer consulta</a>)</h1>
+<form action="{{ request.path }}" method="post">
+    <h3><a href="{{ url_for('login') }}">puedes ver los ultimos clientes aqui</a></h3>
+</form>
+</body>
+</html>

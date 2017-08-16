@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<h3>Farmacia Rivers And Galvez - Ejemplo de SQLAlchemy</h3>
+<hr/>
+{%- for categoria, mensaje in get_flashed_messages(with_categories=true) %}
+<div class="alert alert-danger">
+    {{ mensaje }}
+</div>
+{%- endfor %}
+
+<form action="{{ request.path }}" method="post">
+    <label>Nombre</label>
+    <input type="text" name="nombre" placeholder="Petronila Hormigos" required><br>
+    <label>Edad</label>
+    <input type="text" name="edad" placeholder="tus años de vida" required><br>
+    <label>Direccion</label>
+    <input type="text" name="direccion" placeholder="TumbaMuerto... UIP"><br>
+    <label>cedula</label>
+    <input type="text" name="cedula" placeholder="25-639-443" required><br>
+    <label>celular</label>
+    <input type="text" name="celular" placeholder="6258-2547" required><br>
+    <p><input type = "submit" value = "enviar datos" /></p>
+    <a href="{{ url_for('sintomas') }}">Hacer consulta</a>
+</form>
+</body>
+</html>
